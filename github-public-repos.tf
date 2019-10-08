@@ -1,3 +1,24 @@
+module "github_repo_aacorne-foobar" {
+  source = "./modules"
+  repo_description = "Testing repo creation with TF"
+  repo_name = "aacorne-testing1"
+  review_count = 1
+}
+
+module "github_repo_permissions-boundary" {
+  source = "./modules"
+  repo_description = "Testing repo creation with TF"
+  repo_name = "aacorne-testing2"
+  review_count = 1
+}
+
+module "github_repo_aacorne3" {
+  source = "./modules"
+  repo_description = "Testing repo creation with TF"
+  repo_name = "aacorne-testing3"
+  review_count = 1
+}
+
 resource "github_repository" "aws-lambda-deployments" {
   name        = "aws-lambda-deployments"
   private     = false
@@ -97,15 +118,7 @@ resource "github_repository" "lambda-versioning-the-hard-way" {
   has_issues  = "true"
   archived    = "false"
 }
-resource "github_repository" "permissions-boundary" {
-  name        = "permissions-boundary"
-  private     = false
-  description = "null"
-  has_wiki    = "true"
-  has_downloads = "true"
-  has_issues  = "true"
-  archived    = "false"
-}
+
 resource "github_repository" "pipeline-variable-replacer" {
   name        = "pipeline-variable-replacer"
   private     = false
