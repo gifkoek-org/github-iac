@@ -5,14 +5,14 @@ terraform {
 }
 
 variable "github_token" {
-  type = string
+  type        = string
   description = "Github personal access token"
 }
 
 variable "github_organization" {
-  type = string
+  type        = string
   description = "Github Organisation to deploy to"
-  default = "gifkoek-org"
+  default     = "gifkoek-org"
 }
 
 # Configure the GitHub Provider
