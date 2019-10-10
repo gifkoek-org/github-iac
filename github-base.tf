@@ -17,8 +17,7 @@ variable "github_organization" {
 
 # Configure the GitHub Provider
 provider "github" {
-#  token        = var.github_token
-  token = "52e6d976beb4da910a2a49faed4b8938bf91004e"
+  token        = var.github_token
   organization = var.github_organization
 
 }
