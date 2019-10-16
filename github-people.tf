@@ -19,6 +19,11 @@ resource "github_membership" "gifkoek_fargo" {
   role     = "admin"
 }
 
+resource "github_membership" "fabio_matos" {
+  username = "matosf"
+  role     = "member"
+}
+
 # ---------------------------------------
 # team membership lists
 # ---------------------------------------
@@ -26,11 +31,13 @@ locals {
   users_all = [
     "cornevandyk",
     "gifkoek-fargo",
-    "renier-rhode"
+    "renier-rhode",
+    "matosf"
   ]
   users_foobar = [
     "gifkoek-fargo",
-    "renier-rhode"
+    "renier-rhode",
+    "matosf"
   ]
 }
 
