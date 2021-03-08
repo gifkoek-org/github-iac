@@ -20,7 +20,6 @@ provider "aws" {
 variable "github_token" {
   type        = string
   description = "Github personal access token"
-  default     = "42a581e47f03f112b7dca8e9728bef0dab907061"
 }
 
 variable "github_organization" {
