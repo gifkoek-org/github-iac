@@ -8,8 +8,13 @@ terraform {
     encrypt        = true
   }
   required_providers {
-    github = "~> 2.9.1"
-    aws    = "~> 2.69"
+    github = {
+      source  = "integrations/github"
+      version = "~> 4.4"
+    }
+    aws = {
+      source = "hashicorp/aws"
+    }
   }
 }
 
@@ -17,20 +22,8 @@ provider "aws" {
   #  profile = "gifkoekorg"
 }
 
-variable "github_token" {
-  type        = string
-  description = "Github personal access token"
-}
-
-variable "github_organization" {
-  type        = string
-  description = "Github Organisation to deploy to"
-  default     = "gifkoek-org"
-}
-
 # Configure the GitHub Provider
 provider "github" {
   token        = var.github_token
   organization = var.github_organization
-
 }

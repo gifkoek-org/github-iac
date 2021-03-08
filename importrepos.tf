@@ -1,5 +1,5 @@
 module "githubprimer" {
-  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.1"
+  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.3"
   name        = "githubprimer"
   description = "github intro repo"
   writer_teams = [
@@ -13,7 +13,7 @@ module "githubprimer" {
 
 
 module "aacorne-testing2" {
-  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.1"
+  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.3"
   name        = "aacorne-testing2"
   description = "Testing repo creation with TF"
   writer_teams = [
@@ -27,7 +27,7 @@ module "aacorne-testing2" {
 }
 
 module "aws-testing" {
-  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.1"
+  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.3"
   name        = "aws-testing"
   description = "aws-testing"
   writer_teams = [
@@ -41,7 +41,7 @@ module "aws-testing" {
 }
 
 module "lambda-versioning-the-hard-way" {
-  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.1"
+  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.3"
   name        = "lambda-versioning-the-hard-way"
   description = "Pipelines and CloudFormation template for safe-mode Lambda deploys without using SAM"
   writer_teams = [
@@ -55,7 +55,7 @@ module "lambda-versioning-the-hard-way" {
 }
 
 module "github-terraform-importer" {
-  source       = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.1"
+  source       = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.3"
   name         = "github-terrafom-importer"
   description  = "python script to get current github configuration and create terraform code for it"
   writer_teams = ["foobar"]
