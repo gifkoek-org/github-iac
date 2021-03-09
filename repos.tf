@@ -1,7 +1,8 @@
 module "githubprimer" {
-  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.1"
-  name        = "githubprimer"
-  description = "github intro repo"
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  name                   = "githubprimer"
+  description            = "github intro repo"
+  delete_branch_on_merge = true
   writer_teams = [
     "foobar",
   ]
@@ -11,11 +12,12 @@ module "githubprimer" {
   auto_init = true
 }
 
-
 module "aacorne-testing2" {
-  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.1"
-  name        = "aacorne-testing2"
-  description = "Testing repo creation with TF"
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  name                   = "aacorne-testing2"
+  description            = "Testing repo creation with TF"
+  primary_branch_name    = "master"
+  delete_branch_on_merge = true
   writer_teams = [
     "foobar", "ownerteam"
   ]
@@ -27,9 +29,11 @@ module "aacorne-testing2" {
 }
 
 module "aws-testing" {
-  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.1"
-  name        = "aws-testing"
-  description = "aws-testing"
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  name                   = "aws-testing"
+  description            = "aws-testing"
+  primary_branch_name    = "master"
+  delete_branch_on_merge = true
   writer_teams = [
     "foobar", "ownerteam"
   ]
@@ -41,9 +45,11 @@ module "aws-testing" {
 }
 
 module "lambda-versioning-the-hard-way" {
-  source      = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.1"
-  name        = "lambda-versioning-the-hard-way"
-  description = "Pipelines and CloudFormation template for safe-mode Lambda deploys without using SAM"
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  name                   = "lambda-versioning-the-hard-way"
+  description            = "Pipelines and CloudFormation template for safe-mode Lambda deploys without using SAM"
+  primary_branch_name    = "master"
+  delete_branch_on_merge = true
   writer_teams = [
     "foobar", "ownerteam"
   ]
@@ -55,11 +61,13 @@ module "lambda-versioning-the-hard-way" {
 }
 
 module "github-terraform-importer" {
-  source       = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.1"
-  name         = "github-terrafom-importer"
-  description  = "python script to get current github configuration and create terraform code for it"
-  writer_teams = ["foobar"]
-  owner_teams  = ["foobar"]
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  name                   = "github-terrafom-importer"
+  description            = "python script to get current github configuration and create terraform code for it"
+  primary_branch_name    = "master"
+  delete_branch_on_merge = true
+  writer_teams           = ["foobar"]
+  owner_teams            = ["foobar"]
 
   auto_init = true
   archived  = false
