@@ -1,3 +1,17 @@
+module "okta-jwt" {
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  name                   = "okta-jwt"
+  description            = "testing okta oauth apps with jwt"
+  delete_branch_on_merge = true
+  writer_teams = [
+    "foobar",
+  ]
+  owner_teams = [
+    "foobar",
+  ]
+  auto_init = true
+}
+
 module "githubprimer" {
   source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
   name                   = "githubprimer"
