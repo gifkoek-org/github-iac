@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    #    profile        = "gifkoekorg"
+    profile        = "gifkoekorg"
     bucket         = "gifkoek-terraform-state"
     key            = "github/terraform.tfstate"
     region         = "eu-west-1"
@@ -19,7 +19,7 @@ terraform {
 }
 
 provider "aws" {
-  #  profile = "gifkoekorg"
+  profile = "gifkoekorg"
 }
 
 # Configure the GitHub Provider
