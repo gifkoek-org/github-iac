@@ -1,5 +1,19 @@
+module "fleetdm" {
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.7"
+  name                   = "fleetdm"
+  description            = "fleetdm setup on pi for home use"
+  delete_branch_on_merge = true
+  writer_teams = [
+    "foobar",
+  ]
+  owner_teams = [
+    "foobar",
+  ]
+  auto_init = true
+}
+
 module "okta-jwt" {
-  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.7"
   name                   = "okta-jwt"
   description            = "testing okta oauth apps with jwt"
   delete_branch_on_merge = true
@@ -13,7 +27,7 @@ module "okta-jwt" {
 }
 
 module "githubprimer" {
-  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.7"
   name                   = "githubprimer"
   description            = "github intro repo"
   delete_branch_on_merge = true
@@ -27,7 +41,7 @@ module "githubprimer" {
 }
 
 module "aacorne-testing2" {
-  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.7"
   name                   = "aacorne-testing2"
   description            = "Testing repo creation with TF"
   primary_branch_name    = "master"
@@ -43,7 +57,7 @@ module "aacorne-testing2" {
 }
 
 module "aws-testing" {
-  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.7"
   name                   = "aws-testing"
   description            = "aws-testing"
   primary_branch_name    = "master"
@@ -59,7 +73,7 @@ module "aws-testing" {
 }
 
 module "lambda-versioning-the-hard-way" {
-  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.7"
   name                   = "lambda-versioning-the-hard-way"
   description            = "Pipelines and CloudFormation template for safe-mode Lambda deploys without using SAM"
   primary_branch_name    = "master"
@@ -75,7 +89,7 @@ module "lambda-versioning-the-hard-way" {
 }
 
 module "github-terraform-importer" {
-  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.6"
+  source                 = "git@github.com:gifkoek-org/terraform-modules.git//github-repo?ref=v0.7"
   name                   = "github-terrafom-importer"
   description            = "python script to get current github configuration and create terraform code for it"
   primary_branch_name    = "master"
